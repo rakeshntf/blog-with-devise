@@ -1,0 +1,3 @@
+class WhatsupsController < ApplicationController
+
+end
