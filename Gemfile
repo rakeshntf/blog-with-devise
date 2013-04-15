@@ -8,7 +8,8 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'paperclip' 
 gem 'devise' , '1.4.9'
-
+gem 'omniauth'
+gem 'omniauth-twitter'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
