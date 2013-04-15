@@ -10,6 +10,8 @@ gem 'paperclip'
 gem 'devise' , '1.4.9'
 gem 'omniauth'
 gem 'omniauth-twitter'
+
+gem 'nifty-generators'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -38,3 +40,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test
