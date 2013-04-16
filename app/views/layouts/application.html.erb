@@ -69,25 +69,29 @@
               <span style="color:blue">
               <h3>Sidebar</h3>
               <ul class="nav nav-list">
-                <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. Not you?
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-  <% end %>
-      </div>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-                <li><b><%= link_to"Facebook", "//www.facebook.com"  %></b></li>
-                <li><b><%= link_to "Linkedin", "//www.linkedin.com"   %></b></li>
-
-                <a><%=link_to "Log in with Twitter", "/auth/twitter", :class => "popup", :"data-width" => 600, :"data-height" => 400 %>
-                <%= image_tag "twitter.png", :size => "64x64", 
-               :alt => "Twitter" %></a>
 
 
-              
+            <% if user_signed_in? %>
+                 Signed in as <%= current_user.email %>. Not you?
+                  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+            <% else %>
+                <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+                <% end %>
+              </div>
+                <% flash.each do |name, msg| %>
+                    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+                  <% end %>
+                <%#= link_to"Facebook", "//"  %>
+                <%#= link_to "Linkedin", "//www.linkedin.com"   %>
+
+<%#=link_to "Log in with Twitter", "/auth/twitter", :class => "popup", :"data-width" => 600, :"data-height" => 400 %>
+<%#= image_tag "twitter.png", :size => "64x64", :alt => "Twitter" %>
+
+
+              <a href="/auth/twitter" class="auth_provider">
+  <%= image_tag "twitter.png", :size => "64x64", :alt => "Twitter" %>
+  Twitter
+</a>
 
 
                 

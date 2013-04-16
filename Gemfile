@@ -10,7 +10,7 @@ gem 'paperclip'
 gem 'devise' , '1.4.9'
 gem 'omniauth'
 gem 'omniauth-twitter'
-
+gem 'mongrel', '1.2.0.pre2'
 gem 'nifty-generators'
 # Gems used only for assets and not required
 # in production environments by default.
