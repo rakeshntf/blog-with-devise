@@ -28,8 +28,10 @@
 <p class="text-success"
 <h4>Comments</h4></P>
 <% @home.comments.each do |comment| %>
-<%= comment.body%></br>
-<%= puts Time.now.strftime("%I:%M:%S %z") %>
+<%= comment.body%><br/>
+<p class="text-error"
+<h3><%= Time.now.strftime("%I:%M:%S %z")%></h3></p>
+
 <%end%>
 </p>
 
