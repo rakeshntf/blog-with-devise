@@ -25,10 +25,11 @@
 <br>
 </p>
 <p>
-
-<h3>Comments</h3>
+<p class="text-success"
+<h4>Comments</h4></P>
 <% @home.comments.each do |comment| %>
 <%= comment.body%></br>
+<%= puts Time.now.strftime("%I:%M:%S %z") %>
 <%end%>
 </p>
 
