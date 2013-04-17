@@ -9,12 +9,17 @@
   <tbody>
     <% @homes.each do |home| %>
     <tr>
-    
-          <td> <%= image_tag (home.avatar.url(:medium)) %>
 
-           <%= link_to t('.show', :default => t("helpers.links.show")),
-                      home_path(home), :class => 'btn btn-mini btn-danger'%></td>
- </tr>
+<%= link_to image_tag(home.avatar.url(:thumb)),
+ {:controller=>"homes",:action=>"show",:id=>home.id} %><br/><br/><br/><br/> 
+
+
+    
+          <%#= image_tag (home.avatar.url(:thumb)) %>
+
+           <%#= link_to t('.show', :default => t("helpers.links.show")),
+                      home_path(home), :class => 'btn btn-mini btn-danger'%>
+ 
 
           <%#= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_home_path(home), :class => 'btn btn-mini' %>

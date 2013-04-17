@@ -17,7 +17,7 @@ before_filter :authenticate_user!, :except => [ :index]
   # GET /homes/1.json
   def show
     @home = Home.find(params[:id])
-    
+
 
     respond_to do |format|
       format.html # show.html.erb
