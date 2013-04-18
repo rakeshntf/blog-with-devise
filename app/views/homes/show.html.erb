@@ -29,7 +29,7 @@
 <h4>Comments</h4></P>
 <% @home.comments.each do |comment| %>
 <%= comment.body%><br/>
-<p class="text-error"
+<p class="text-error">
 <h3><%= Time.now.strftime("%I:%M:%S %z")%></h3></p>
 
 <%end%>
