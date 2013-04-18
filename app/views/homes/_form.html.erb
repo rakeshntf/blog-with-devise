@@ -23,6 +23,13 @@
               <%= f.label :avatar %><br />
             <%= f.file_field :avatar %>
           <div/>
+
+<div class='well'>
+  <%= f.label :Date%>
+    <input type="text" data-behaviour='datepicker' >
+</div>
+
+
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

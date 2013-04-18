@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+//= require bootstrap-datepicker
 
 function popupCenter(url, width, height, name) {
  var left = (screen.width/2)-(width/2);
@@ -38,25 +39,10 @@ if(window.opener && window.opener.popupValue === 'on') {
 
 
 
+   $("[data-behaviour~='datepicker']").datepicker({
+    "format": "yyyy-mm-dd",
+    "weekStart": 1,
+    "autoclose": true
+});
 
-jQuery ->
-  $('body').prepend('<div id="fb-root"></div>')
-
-  $.ajax
-    url: "#{window.location.protocol}//connect.facebook.net/en_US/all.js"
-    dataType: 'script'
-    cache: true
-
-
-window.fbAsyncInit = ->
-  FB.init(appId: '<%= ENV["FACEBOOK_APP_ID"] %>', cookie: true)
-
-  $('#sign_in').click (e) ->
-    e.preventDefault()
-    FB.login (response) ->
-      window.location = '/auth/facebook/callback' if response.authResponse
-
-  $('#sign_out').click (e) ->
-    FB.getLoginStatus (response) ->
-      FB.logout() if response.authResponse
-    true
+ 
