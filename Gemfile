@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem 'sqlite3'
 gem 'paperclip' 
 gem 'devise' , '1.4.9'
 gem 'omniauth'
@@ -14,6 +14,7 @@ gem 'mongrel', '1.2.0.pre2'
 gem 'nifty-generators'
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'omniauth-facebook'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
