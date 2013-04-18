@@ -1,6 +1,7 @@
 Web::Application.routes.draw do
 match "/auth/:provider/callback" => "authentications#create"
-
+ match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'authentications#destroy', as: 'signout'
 
   resources :authentications
 
