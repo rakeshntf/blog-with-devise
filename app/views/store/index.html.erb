@@ -1,0 +1,18 @@
+
+<p>Find me in app/views/store/index.html.erb</p>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+
+<% @homes.each do |home| %>
+
+
+<%= link_to image_tag(home.avatar.url(:thumb)) %><BR/>
+<%= home.name%><BR><br/>
+
+<%= button_to 'Add to Cart', line_items_path(:home_id => home) %>
+
+<% end %>
+
+

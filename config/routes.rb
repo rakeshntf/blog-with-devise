@@ -1,4 +1,12 @@
 Web::Application.routes.draw do
+  get "store/index"
+
+  resources :line_items
+
+
+  resources :carts
+
+
 match "/auth/:provider/callback" => "authentications#create"
  match 'auth/failure', to: redirect('/')
   match 'signout', to: 'authentications#destroy', as: 'signout'

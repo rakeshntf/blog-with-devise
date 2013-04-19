@@ -9,7 +9,7 @@
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @home.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:avatar_file_name) %>:</strong></dt>
-<dt><strong><%= model_class.human_attribute_name(:avatar_updated_at) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:avatar_updated_at) %>:</strong></dt>
   <dd><%= @home.avatar_updated_at %></dd>
 
 <p>
@@ -29,8 +29,9 @@
 <h4>Comments</h4></P>
 <% @home.comments.each do |comment| %>
 <%= comment.body%><br/>
+ <h5><%= Time.now.in_time_zone%></h5>
 <p class="text-error">
-<h3><%= Time.now.strftime("%I:%M:%S %z")%></h3></p>
+</p>
 
 <%end%>
 </p>
