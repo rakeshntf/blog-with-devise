@@ -16,6 +16,7 @@ match "/auth/:provider/callback" => "authentications#create"
   devise_for :users, :controllers => {:registrations =>'registrations'}
 
   resources :homes  do  
+    get :autocomplete_home_name, :on => :collection
   resources :comments
 end
 
