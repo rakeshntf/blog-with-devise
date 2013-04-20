@@ -15,6 +15,8 @@
   <%= home.name%>
  
 
+
+
     
           <%#= image_tag (home.avatar.url(:thumb)) %>
 
@@ -35,6 +37,12 @@
   </tbody>
 </table>
 
+
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_home_path,
-            :class => 'btn btn-primary' %>
+            :class => 'btn btn-primary' %><br/>
+     
+            <%= link_to t(".Goto Store", :default =>t("helper.links.Goto_store")),
+            store_index_path,
+            :class =>'btn btn-primary'%>
+
