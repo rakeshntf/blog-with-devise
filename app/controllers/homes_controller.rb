@@ -3,7 +3,7 @@ class HomesController < ApplicationController
   # GET /homes.json
 
 before_filter :authenticate_user!, :except => [ :index]
-
+autocomplete :home, :name,  :full => true
   def index
     @homes = Home.all
 
