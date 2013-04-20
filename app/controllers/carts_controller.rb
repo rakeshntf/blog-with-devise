@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
   # GET /carts
   # GET /carts.json
+  before_filter :authenticate_user!, :except => [ :index]
   def index
     @carts = Cart.all
 
