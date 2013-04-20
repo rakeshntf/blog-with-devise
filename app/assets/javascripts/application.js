@@ -15,6 +15,10 @@
 //= require twitter/bootstrap
 //= require_tree .
 //= require bootstrap-datepicker
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
+//= require autocomplete-rails
 
 function popupCenter(url, width, height, name) {
  var left = (screen.width/2)-(width/2);
@@ -45,4 +49,9 @@ if(window.opener && window.opener.popupValue === 'on') {
     "autoclose": true
 });
 
+
+$('#my_autocomplete_field').bind('railsAutocomplete.select', function(event, data){
+  /* Do something here */
+  alert(data.item.id);
+});
  
