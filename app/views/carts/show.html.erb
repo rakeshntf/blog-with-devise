@@ -2,11 +2,20 @@
 <h2>Your Pragmatic Cart</h2>
 <ul>
 <% for item in @cart.line_items %>
+<table>
+<tr>
 
-<li><%= item.home.name %></li>
+<th><%= item.home.name %></th>
 
+<th><%= item.home.avatar %></th>
+
+
+
+</tr>
+</table>
 <% end %>
 </ul>
+
 
 
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
