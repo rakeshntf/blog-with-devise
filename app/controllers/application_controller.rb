@@ -11,5 +11,12 @@ class ApplicationController < ActionController::Base
  	 	cart
  	 end
 
+def funky_method
+	"#{self.name}.camelize"
+	
+end
+
+
+autocomplete :home, :name,  :display_value => :funky_method
 
 end
