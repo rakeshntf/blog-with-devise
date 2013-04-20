@@ -35,16 +35,13 @@
 
 <%end%>
 </p>
-          
-
-
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               homes_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_home_path(@home), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+  <%#= link_to t('.destroy', :default => t("helpers.links.destroy")),
               home_path(@home),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },

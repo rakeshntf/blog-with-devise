@@ -55,3 +55,5 @@ $('#my_autocomplete_field').bind('railsAutocomplete.select', function(event, dat
   alert(data.item.id);
 });
  
+
+ 
