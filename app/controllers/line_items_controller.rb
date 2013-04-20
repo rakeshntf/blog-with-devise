@@ -42,7 +42,7 @@ class LineItemsController < ApplicationController
   def create
     @cart = current_cart
     home =Home.find(params[:home_id])
-    @line_item = @cart.line_items.build(:home=> home)
+    @line_item = @cart.add_home(home.id)
 
     respond_to do |format|
       if @line_item.save
