@@ -2,17 +2,16 @@
 <h2>Your Pragmatic Cart</h2>
 <ul>
 <% for item in @cart.line_items %>
-<table>
-<tr>
-
-<th><%= item.home.name %></th>
-
-<th><%= item.home.avatar %></th>
 
 
+<li><%= item.quantity %>&times; <br/>
+<%= item.home.name %>
 
-</tr>
-</table>
+<%= item.home.avatar %></li>
+
+
+
+
 <% end %>
 </ul>
 
