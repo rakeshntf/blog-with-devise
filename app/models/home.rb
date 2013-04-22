@@ -7,6 +7,11 @@ class Home < ActiveRecord::Base
 			  :thumb => "100x100>" }
 			 
 			  
+ has_attached_file :video 
+      
+
+
+
 
 has_many :comments
 default_scope :order => 'name'
