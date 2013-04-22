@@ -17,24 +17,24 @@
 </p>
 
 <%= image_tag @home.avatar.url(:medium) %>
+<br/><br/><br/>
+
+
   
 </dl>
 <p>
-<h4>comments:</h>
 <%= render "comments/form" %>
 <br>
 </p>
 <p>
-<p class="text-success"
-<h4>Comments</h4></P>
-<% @home.comments.each do |comment| %>
-<%= comment.body%><br/>
- <h5><%= Time.now.in_time_zone%></h5>
-<p class="text-error">
-</p>
-
-<%end%>
-</p>
+      <p class="text-success">
+      <h3>Comments (<%= @home.comments.size %>)</h3>
+      <% @home.comments.each do |comment| %>
+      <p>
+      <%= link_to "hide", '#', class: "hide-comments"  %>
+      <%= comment.body   %><p>
+      <%end%>
+      </p>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

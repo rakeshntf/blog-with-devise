@@ -9,7 +9,6 @@
       <%= f.label :name, :class => 'control-label' %>
       <%= f.autocomplete_field :name, autocomplete_home_name_homes_path,:id_element => '#some_element'%>
       
-      
     </div>
       <div class="control-group">
         <%= f.label :title, :class => 'control-label' %>
@@ -25,14 +24,16 @@
         </div>
 
           <div class="field">
-              <%= f.label :avatar %><br />
-            <%= f.file_field :avatar %>
+              <%= f.label :Image %><br />
+            <%= f.file_field :avatar,:class => 'file_field' %>
           <div/>
 
-
+        
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 homes_path, :class => 'btn' %>
   </div>
 <% end %>
+<div/>
+<div/>
