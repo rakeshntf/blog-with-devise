@@ -43,12 +43,11 @@ if(window.opener && window.opener.popupValue === 'on') {
 
 
 
-   $("[data-behaviour~='datepicker']").datepicker({
-    "format": "yyyy-mm-dd",
-    "weekStart": 1,
-    "autoclose": true
-});
-
+ 
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+ 
 
 $('#my_autocomplete_field').bind('railsAutocomplete.select', function(event, data){
   /* Do something here */
@@ -57,3 +56,38 @@ $('#my_autocomplete_field').bind('railsAutocomplete.select', function(event, dat
  
 
  
+
+  $(function() {
+    $( "#accordion" ).accordion();
+  });
+
+
+  $(function() {
+    var state = true;
+    $( "#button" ).click(function() {
+      if ( state ) {
+        $( "#effect" ).animate({
+          backgroundColor: "#aa0000",
+          color: "#fff",
+          width: 500
+        }, 1000 );
+      } else {
+        $( "#effect" ).animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240
+        }, 1000 );
+      }
+      state = !state;
+    });
+  });
+
+
+
+
+  $(document).ready(function() {
+    $('.hide-comments').click(function(e) {
+      e.preventDefault();
+      $(this).parent().hide();
+    });
+});
