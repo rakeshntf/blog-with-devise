@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'yaml_db'	
-gem 'mysql2'
+gem 'pg'
 gem 'paperclip' 
 gem 'devise' , '1.4.9'
 gem 'omniauth'
