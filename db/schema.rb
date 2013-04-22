@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420064027) do
+ActiveRecord::Schema.define(:version => 20130422125350) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -45,6 +45,10 @@ ActiveRecord::Schema.define(:version => 20130420064027) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "video_file_name"
+    t.string   "video_content_type"
+    t.integer  "video_file_size"
+    t.datetime "video_updated_at"
   end
 
   create_table "line_items", :force => true do |t|
