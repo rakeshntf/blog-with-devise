@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'yaml_db'	
-gem 'pg'
+gem 'mysql2'
 gem 'paperclip' 
 gem 'devise' , '1.4.9'
 gem 'omniauth'
@@ -18,6 +18,10 @@ gem 'omniauth-facebook'
 gem 'bootstrap-datepicker-rails'
 gem 'twitter'
 gem 'rails3-jquery-autocomplete'
+gem 'paperclip-ffmpeg'
+gem 'cocaine'
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
