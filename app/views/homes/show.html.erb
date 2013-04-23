@@ -16,13 +16,20 @@
   <b>Avtar:</b>
 </p>
 
+
         <%= image_tag @home.avatar.url(:medium) %>
          <br/><br/><br/>
-          <a href="<%= @home.video.url %> ">
+          <a href="<%#= @home.video.url %> ">
            <b> File attached </b></a>
 
-              <%= video_tag @home.video.url%>
   
+    <a href="<%= @home.video.url %>"  
+    style="display:block;width:400px;height:300px", >
+  </a> 
+
+<%= video_tag "ra.mp4", :size => "320x240", :controls => true %>
+
+
 </dl>
 <p>
 <%= render "comments/form" %>
