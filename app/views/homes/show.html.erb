@@ -19,16 +19,8 @@
 
         <%= image_tag @home.avatar.url(:medium) %>
          <br/><br/><br/>
-          <a href="<%#= @home.video.url %> ">
-           <b> File attached </b></a>
-
-  
-    <a href="<%= @home.video.url %>"  
-    style="display:block;width:400px;height:300px", >
-  </a> 
-
-<%= video_tag "ra.mp4", :size => "320x240", :controls => true %>
-
+         <h4> Attached Video File </h4>
+          <%= youtube_video @home.video.url %>
 
 </dl>
 <p>
