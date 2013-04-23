@@ -91,3 +91,12 @@ $('#my_autocomplete_field').bind('railsAutocomplete.select', function(event, dat
       $(this).parent().hide();
     });
 });
+
+
+
+
+
+  function showVideoPlayer(){          
+    console.log('video displayed');      
+    $("#video").fadeIn('medium');
+}
