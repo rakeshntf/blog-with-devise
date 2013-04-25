@@ -1,6 +1,6 @@
 Web::Application.routes.draw do
   get "store/index"
-#get "video/index"
+get "video/index"
   resources :line_items
 
 # resources :videos

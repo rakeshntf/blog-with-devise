@@ -85,4 +85,9 @@ autocomplete :home, :name,  :full => true
       format.json { head :no_content }
     end
   end
+
+
+  def upload
+    @foo = modelWithPaperclip.create({ :img => params[:file] })
+  end
 end

@@ -19,8 +19,42 @@
 
         <%= image_tag @home.avatar.url(:medium) %>
          <br/><br/><br/>
+
+
+
          <h4> Attached Video File </h4>
           <%= youtube_video @home.video.url %>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery File Upload Example</title>
+</head>
+<body>
+<input id="fileupload" type="file" name="video" data-url="localhost/3000" >
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/vendor/jquery.ui.widget.js"></script>
+<script src="js/jquery.iframe-transport.js"></script>
+<script src="js/jquery.fileupload.js"></script>
+<script>
+$(function () {
+    $('#fileupload').fileupload({
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo(document.body);
+            });
+        }
+    });
+});
+</script>
+</body> 
+</html>
+
+
+<div id="dropzone" class="fade well">Drop files here</div>
+
+
 
 </dl>
 <p>
@@ -36,6 +70,8 @@
       <%end%>
       </p>
 
+
+
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               homes_path, :class => 'btn'  %>
@@ -47,3 +83,4 @@
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
 </div>
+

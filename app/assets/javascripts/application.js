@@ -19,6 +19,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require autocomplete-rails
+//= require jquery-fileupload/basic
 
 function popupCenter(url, width, height, name) {
  var left = (screen.width/2)-(width/2);
@@ -100,3 +101,30 @@ $('#my_autocomplete_field').bind('railsAutocomplete.select', function(event, dat
     console.log('video displayed');      
     $("#video").fadeIn('medium');
 }
+
+
+$('#fileupload').fileupload({
+    dropZone: $('#dropzone')
+});
+
+$(document).bind('dragover', function (e) {
+    var dropZone = $('#dropzone'),
+        timeout = window.dropZoneTimeout;
+    if (!timeout) {
+        dropZone.addClass('in');
+    } else {
+        clearTimeout(timeout);
+    }
+    if (e.target === dropZone[0]) {
+        dropZone.addClass('hover');
+    } else {
+        dropZone.removeClass('hover');
+    }
+    window.dropZoneTimeout = setTimeout(function () {
+        window.dropZoneTimeout = null;
+        dropZone.removeClass('in hover');
+    }, 100);
+});
+
+
+
