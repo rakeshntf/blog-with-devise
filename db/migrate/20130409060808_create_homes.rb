@@ -3,6 +3,7 @@ class CreateHomes < ActiveRecord::Migration
     create_table :homes do |t|
       t.string :name
       t.string :title
+      t.string :upload
 
       t.timestamps
     end
