@@ -61,10 +61,10 @@ $( this )
 <div id="draggable" >
   <form name="demoFiler" id="droppable" enctype="multipart/form-data">
 <input type="file" name="multiUpload" id="multiUpload" multiple />
-<input type="submit" name="submitHandler" id="submitHandler" value="Upload" />
+<input type="submit" name="submitHandler" id= <%= model_class.human_attribute_name(:dropped) %> value="Upload" />
 </div>
 <div id="droppable" class="ui-widget-header">
-<p>Drop here</p>
+<p<%= image_tag @home.avatar.url(:medium) %></p>
 </div>
 </form>
 <p></p>
@@ -115,11 +115,11 @@ $( this )
 <ul id="sortable">
 
   <li ><span ></span> <%#= image_tag @home.avatar.url(:medium) %></li>
-  <li ><span ></span><%= image_tag "twitter.png", :size => "100x100", :alt => "Twitter" %><br/></li>
-  <li ><span ></span><%= image_tag "fb.png", :size => "100x100", :alt => "Twitter" %></li>
-  <li ><span></span><%= image_tag "g.jpg", :size => "100x100", :alt => "Twitter" %></li>
-  <li><span></span><%= image_tag "rails.png", :size => "100x100", :alt => "Twitter" %></li>
-  <li ><span ></span><%= image_tag "twitter.png", :size => "100x100", :alt => "Twitter" %></li>
+  <li ><%= image_tag "twitter.png", :size => "100x100", :alt => "Twitter" %><br/></li>
+  <li ><%= image_tag "fb.png", :size => "100x100", :alt => "Twitter" %></li>
+  <li ><%= image_tag "g.jpg", :size => "100x100", :alt => "Twitter" %></li>
+  <li><%= image_tag "rails.png", :size => "100x100", :alt => "Twitter" %></li>
+  <li ><%= image_tag "twitter.png", :size => "100x100", :alt => "Twitter" %></li>
   
  </ul>
  
