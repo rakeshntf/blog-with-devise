@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="/resources/demos/style.css" />
 <style>
 #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
-#droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+#droppable { width: 250px; height: 250px; padding: 0.5em; float: left; margin: 10px; }
 </style>
 <script>
 $(function() {
@@ -55,21 +55,20 @@ $( this )
 });
 });
 
-
-
 </script>
 </head>
 <body>
-<div id="draggable" class="ui-widget-content">
-  <form name="demoFiler" id="demoFiler" enctype="multipart/form-data">
+<div id="draggable" >
+  <form name="demoFiler" id="droppable" enctype="multipart/form-data">
 <input type="file" name="multiUpload" id="multiUpload" multiple />
 <input type="submit" name="submitHandler" id="submitHandler" value="Upload" />
-</form>
-<p>Drag me to my target <%= image_tag @home.avatar.url(:medium) %></p>
 </div>
 <div id="droppable" class="ui-widget-header">
 <p>Drop here</p>
 </div>
+</form>
+<p></p>
+
 </body>
 </html>
 
