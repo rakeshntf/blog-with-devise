@@ -1,6 +1,10 @@
 Web::Application.routes.draw do
+  get "file/upload"
+
   get "store/index"
 get "video/index"
+ get "file/upload"
+get "file/dd"
   resources :line_items
 
 # resources :videos
