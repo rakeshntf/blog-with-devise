@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require_tree 
  *= require jquery.fileupload-ui
  */ 
 
@@ -79,47 +79,67 @@
     background: green;
 }
 
-#dropzone {
-    background: palegreen;
-    width: 150px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    font-weight: bold;
+
+
+
+
+
+
+
+fileinput-button {
+  position: relative;
+  overflow: hidden;
 }
-#dropzone.in {
-    width: 600px;
-    height: 200px;
-    line-height: 200px;
-    font-size: larger;
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(-300px, 0) scale(4);
+  font-size: 23px;
+  direction: ltr;
+  cursor: pointer;
 }
-#dropzone.hover {
-    background: lawngreen;
+.fileupload-buttonbar .btn,
+.fileupload-buttonbar .toggle {
+  margin-bottom: 5px;
 }
-#dropzone.fade {
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    opacity: 1;
+.progress-animated .bar {
+  background: url(../img/progressbar.gif) !important;
+  filter: none;
+}
+.fileupload-loading {
+  float: right;
+  width: 32px;
+  height: 32px;
+  background: url(../img/loading.gif) center no-repeat;
+  background-size: contain;
+  display: none;
+}
+.fileupload-processing .fileupload-loading {
+  display: block;
 }
 
-#dropbox {
-  width: 425px;
-  height: 300px;
-  border: 2px solid #DDD;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  background-color: #FEFFEC;
-  text-align: center;
-  color: #BBB;
-  font-size: 2em;
-  font-family: Arial, sans-serif;
+@media (max-width: 767px) {
+  .fileupload-buttonbar .toggle,
+  .files .toggle,
+  .files .btn span {
+    display: none;
+  }
+  .files .name {
+    width: 80px;
+    word-wrap: break-word;
+  }
 }
- 
-#droplabel {
-  position: relative;
-  top: 40%;
-   background: lawngreen;
+
+
+
+body {
+  padding-top: 60px;
+}
+
+.ng-cloak {
+  display: none;
 }
