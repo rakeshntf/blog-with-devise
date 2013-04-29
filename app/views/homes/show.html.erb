@@ -17,7 +17,7 @@
 </p>
 
 
-        <%#= image_tag @home.avatar.url(:medium) %>
+        <%= image_tag @home.avatar.url(:medium) %>
          <br/><br/><br/>
 
 
@@ -26,51 +26,6 @@
           <%= youtube_video @home.video.url %>
 
 </dl>
-
-
-
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>jQuery UI Droppable - Default functionality</title>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-<link rel="stylesheet" href="/resources/demos/style.css" />
-<style>
-#draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
-#droppable { width: 250px; height: 250px; padding: 0.5em; float: left; margin: 10px; }
-</style>
-<script>
-$(function() {
-$( "#draggable" ).draggable();
-$( "#droppable" ).droppable({
-drop: function( event, ui ) {
-$( this )
-.addClass( "ui-state-highlight" )
-.find( "p" )
-.html( "Dropped!" );
-}
-});
-});
-
-</script>
-</head>
-<body>
-<div id="draggable" >
-  <form name="demoFiler" id="droppable" enctype="multipart/form-data">
-<input type="file" name="multiUpload" id="multiUpload" multiple />
-<input type="submit" name="submitHandler" id= <%= model_class.human_attribute_name(:dropped) %> value="Upload" />
-</div>
-<div id="droppable" class="ui-widget-header">
-<p<%= image_tag @home.avatar.url(:medium) %></p>
-</div>
-</form>
-<p></p>
-
-</body>
-</html>
 
 
 
@@ -87,45 +42,6 @@ $( this )
       <%= comment.body  %><br/><%= link_to "hide", '#', class: "hide-comments"  %><p>
       <%end%>
       </p>
-
-<!doctype html>
- 
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>jQuery UI Sortable - Default functionality</title>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css" />
-  <style>
-  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
-  #sortable li span { position: absolute; margin-left: -1.3em; }
-  </style>
-  <script>
-  $(function() {
-    $( "#sortable" ).sortable();
-    $( "#sortable" ).disableSelection();
-  });
-  </script>
-</head>
-<body>
- 
-<ul id="sortable">
-
-  <li ><span ></span> <%#= image_tag @home.avatar.url(:medium) %></li>
-  <li ><%= image_tag "twitter.png", :size => "100x100", :alt => "Twitter" %><br/></li>
-  <li ><%= image_tag "fb.png", :size => "100x100", :alt => "Twitter" %></li>
-  <li ><%= image_tag "g.jpg", :size => "100x100", :alt => "Twitter" %></li>
-  <li><%= image_tag "rails.png", :size => "100x100", :alt => "Twitter" %></li>
-  <li ><%= image_tag "twitter.png", :size => "100x100", :alt => "Twitter" %></li>
-  
- </ul>
- 
-</body>
-</html>
-
 
 
 
