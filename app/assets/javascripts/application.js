@@ -13,13 +13,24 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require_tree .
-//= require bootstrap-datepicker
+]//= require bootstrap-datepicker
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui
+
 //= require autocomplete-rails
-//= require jquery-dtupload/basic
+//= require jquery.fileupload-ui 
+//= require jquery-fileupload/vendor/jquery.ui.widget
+//= require jquery-fileupload/vendor/load-image
+//= require jquery-fileupload/vendor/canvas-to-blob
+//= require jquery-fileupload/vendor/tmpl
+//= require jquery-fileupload/jquery.iframe-transport
+//= require jquery-fileupload/jquery.fileupload
+//= require jquery-fileupload/jquery.fileupload-fp
+//= require jquery-fileupload/jquery.fileupload-ui
+//= require jquery-fileupload/locale  
+
+//= require_tree .
+
 
 function popupCenter(url, width, height, name) {
  var left = (screen.width/2)-(width/2);
@@ -103,10 +114,6 @@ $('#my_autocomplete_field').bind('railsAutocomplete.select', function(event, dat
 }
 
 
-$('#dtupload').dtupload({
-    dropZone: $('#dropzone')
-});
-
 $(document).bind('dragover', function (e) {
     var dropZone = $('#dropzone'),
         timeout = window.dropZoneTimeout;
@@ -125,69 +132,3 @@ $(document).bind('dragover', function (e) {
         dropZone.removeClass('in hover');
     }, 100);
 });
-
-
-
-var dropbox = document.getElementById("dropbox")
- 
-// init event handlers
-dropbox.addEventListener("dragenter", dragEnter, false);
-dropbox.addEventListener("dragexit", dragExit, false);
-dropbox.addEventListener("dragover", dragOver, false);
-dropbox.addEventListener("drop", drop, true);
-
-
-function dragEnter(evt) {
-  evt.stopPropagation();
-  evt.preventDefault();
-}
-
-function noopHandler(evt) {
-  evt.stopPropagation();
-  evt.preventDefault();
-}
-
-evt.stopPropagation();
-evt.preventDefault();
- 
-var dt = event.dataTransfer;
-dt.mozSetDataAt("image/png", stream, 0);
-dt.mozSetDataAt("application/x-moz-dt", dt, 0);
-dt.setData("text/uri-list", imageurl);
-dt.setData("text/plain", imageurl);
-var count = dt.length;
-
-
-
-
- 
-// Only call the handler if 1 or more dt was dropped.
-if (count &gt; 0)
-    handledt(dt);
-
-
-    var dt = dt[0];
- 
-document.getElementById("droplabel").innerHTML = "Processing " + dt.name;
- 
-var reader = new dtReader();
- 
-// init the reader event handlers
-reader.onload = handleReaderLoad;
- 
-// begin the read operation
-reader.readAsDataURL(dt);
-
-
-function handleReaderLoad(evt) {
-  var img = document.getElementById("preview");
-  img.src = evt.target.result;
-}
-
-$(".multiUpload").dropImageReader (file, event) ->
-  img = $ "<img/>",
-    alt: file.name
-    src: event.target.result
-    title: file.name
- 
-  $(this).append img
