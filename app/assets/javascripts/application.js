@@ -16,18 +16,10 @@
 ]//= require bootstrap-datepicker
 //= require jquery
 //= require jquery_ujs
+//= require jquery-fileupload
 
 //= require autocomplete-rails
 //= require jquery.fileupload-ui 
-//= require jquery-fileupload/vendor/jquery.ui.widget
-//= require jquery-fileupload/vendor/load-image
-//= require jquery-fileupload/vendor/canvas-to-blob
-//= require jquery-fileupload/vendor/tmpl
-//= require jquery-fileupload/jquery.iframe-transport
-//= require jquery-fileupload/jquery.fileupload
-//= require jquery-fileupload/jquery.fileupload-fp
-//= require jquery-fileupload/jquery.fileupload-ui
-//= require jquery-fileupload/locale  
 
 //= require_tree .
 
@@ -132,3 +124,7 @@ $(document).bind('dragover', function (e) {
         dropZone.removeClass('in hover');
     }, 100);
 });
+
+
+
+
