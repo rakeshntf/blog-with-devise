@@ -20,7 +20,7 @@ gem 'twitter'
 gem 'rails3-jquery-autocomplete'
 gem 'paperclip-ffmpeg'
 gem 'cocaine'
-gem "jquery-fileupload-rails"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -34,6 +34,7 @@ group :assets do
 end
 gem "twitter-bootstrap-rails"
 gem 'jquery-rails'
+gem "jquery-fileupload-rails"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
