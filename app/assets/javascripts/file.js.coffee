@@ -59,3 +59,19 @@ var jqXHR = $('#fileupload').fileupload('send', {files: filesList})
     .success(function (result, textStatus, jqXHR) {/* ... */})
     .error(function (jqXHR, textStatus, errorThrown) {/* ... */})
     .complete(function (result, textStatus, jqXHR) {/* ... */});
+
+
+
+
+
+ $("button.continue").html("Next step...")
+
+  var hiddenBox = $("#banner-message") ;
+  $("#button-container button").on ("click", function(event){
+    huiddenBox.show();
+  });
+  
+
+
+ 
+
